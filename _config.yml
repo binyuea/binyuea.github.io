@@ -1,0 +1,42 @@
+permalink   : /:categories/:year/:title/
+markdown    : kramdown
+highlighter : pygments
+
+paginate: 6
+comments: true
+paginate_path: "/page/:num"
+
+source: source
+destination: _site
+sass:
+  sass_dir: _scss
+  style: compressed
+
+cover: /assets/images/default-cover.png
+
+# site title, description, meta_description, meta_keywords
+# Details for the RSS feed generator
+name: Harbin
+title: Harbin
+description: "Well, happy finding you here."
+keywords: " blog, web"
+url: http://www.harbinfate.com
+baseurl: ""
+domain_name: harbinfate.com
+# google_analytics: UA-52446115-1
+repo: http://github.com/harbinzhang
+disqus_shortname: "harbinfate"
+
+author:
+  name      : Haibin Zhang
+  image     : /assets/images/author.jpg
+  email     : seashore.real@gmail.com
+  url       : http://harbinfate.com
+  facebook  : http://facebook.com/haibin.zhang.12
+  twitter   : http://twitter.com/SayHarbin
+  instagram : http://instagram.com/harbinzhang
+  github    : http://github.com/harbinzhang
+  linkedin  : https://www.linkedin.com/in/haibin-zhang-486652100
+  bio       : ""
+
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
