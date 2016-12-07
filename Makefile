@@ -8,6 +8,6 @@ git:
 	# git status
 	git commit -m 'post update'
 	git push
-	# zhang518
+	zhang518
 	
 	
