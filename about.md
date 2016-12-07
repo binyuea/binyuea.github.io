@@ -7,6 +7,6 @@ permalink: /about/
 
 This is a website trying to find valuable articles.
 
-I mean, I will find these by myself, and I will study how to improve the results I found. Am I smart :)
+I mean, I will find these by myself, and I will study how to improve the results I found. Am I smart : )
 
 So, be with me. 
