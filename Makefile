@@ -4,7 +4,7 @@ run:
 git:
 	git add .
 	git commit -m 'post update'
-	git push -p zhang518
+	git push 
 	# zhang518
 
 	
