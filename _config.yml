@@ -1,6 +1,6 @@
 permalink   : /:categories/:year/:title/
 markdown    : kramdown
-highlighter : pygments
+highlighter : rough
 
 paginate: 6
 comments: true
