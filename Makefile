@@ -2,12 +2,9 @@ run:
 	@echo "Running the Java program to create the JSON file. "
 
 git:
-	# system "git add ."
-	# system "git status"
 	git add .
-	# git status
 	git commit -m 'post update'
-	git push
-	zhang518
-	
+	git push -p zhang518
+	# zhang518
+
 	
