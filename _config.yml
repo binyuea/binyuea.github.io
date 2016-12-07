@@ -16,19 +16,19 @@ cover: /assets/images/default-cover.png
 
 # site title, description, meta_description, meta_keywords
 # Details for the RSS feed generator
-name: Harbin
-title: Harbin
+name: Muja Ka!
+title: Muja Ka!
 description: "Well, happy finding you here."
 keywords: "blog, web"
 url: http://www.mujaka.com
 baseurl: ""
 domain_name: mujaka.com
 # google_analytics: UA-52446115-1
-repo: http://github.com/binyuea
+repo: http://github.com/binyuea/binyuea.github.io
 disqus_shortname: "mujaka"
 
 author:
-  name      : Haibin Zhang
+  name      : Haibin
   image     : /assets/images/author.jpg
   email     : seashore.real@gmail.com
   url       : http://harbinfate.com
