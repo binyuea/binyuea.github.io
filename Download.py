@@ -6,7 +6,7 @@ import re
 from bs4 import BeautifulSoup
 from time import gmtime, strftime
 
-url = 'http://mp.weixin.qq.com/s?__biz=MzA3MDM3MDYwMg==&mid=2653888920&idx=1&sn=006bf0be798e6441c4cb498a1251d45b&chksm=84e655ddb391dccb9e47cbe66b644f650908316fa5c94b4cf22172b68879b469443d9d20835b&mpshare=1&scene=1&srcid=1208LrYnsk6zf70iq0A6rbMp'
+
 # url = 'http://mp.weixin.qq.com/s?__biz=MzA3MDM3MDYwMg==&mid=2653888920&idx=6&sn=ce64610af0a495c1159af89c1ec200ea&chksm=84e655ddb391dccb2918ba067fd05fab6a10ce7734167afda6d1eb7ee6959614637f155f6957&mpshare=1&scene=1&srcid=1208Y06Ofu0jGs5ej7hStjsn#rd'
 out_dir = '_posts/'
 
@@ -61,7 +61,10 @@ def download(url):
 		if item.getText() and item.getText() != ' ':
 			if flag:
 				# print item.getText(),
-				f.write(item.getText().encode('utf-8'))
+				if item.br:
+					f.write(item.getText().encode('utf-8')+'\n')
+				else:
+					f.write(item.getText().encode('utf-8'))
 			else:
 				flag = True
 
@@ -73,4 +76,7 @@ def download(url):
 
 
 if __name__ == '__main__':
-	download(url)
+	# download(url)
+	f = open('./posts/urls')
+	for line in f:
+		download(line)
