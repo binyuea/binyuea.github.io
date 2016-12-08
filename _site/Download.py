@@ -78,9 +78,14 @@ def download(url):
 if __name__ == '__main__':
 	# download(url)
 	f = open('./posts/urls')
+	back = open('./posts/backurls','')
 	for line in f:
 		download(line)
+		back.write(line + '\n')
+	f.close()
+	back.close()
 	# os.remove('./posts/urls')
 	# f = open('./posts/urls','w+')
-	f.close()
+
+
 
