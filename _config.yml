@@ -1,42 +1,31 @@
-permalink   : /:categories/:year/:title/
-markdown    : kramdown
-highlighter : rouge
+safe: false
 
-paginate: 6
-comments: true
-paginate_path: "/page/:num"
+# build settings
+markdown: kramdown
+# markdown: redcarpet
+highlighter: rouge
+lsi: false
+permalink: /:title
 
-source: .
-destination: _site
-sass:
-  sass_dir: _scss
-  style: compressed
-
-cover: /assets/images/default-cover.png
-
-# site title, description, meta_description, meta_keywords
-# Details for the RSS feed generator
-name: Muja Ka!
-title: Muja Ka!
+title: "Harbin"
 description: "Well, happy finding you here."
-keywords: "blog, web"
-url: http://www.mujaka.com
 baseurl: ""
-domain_name: mujaka.com
-# google_analytics: UA-52446115-1
-repo: http://github.com/binyuea/binyuea.github.io
-disqus_shortname: "mujaka"
+url: "http://www.harbinfate.com" # replace by your site's url
+twitter_username: SayHarbin
+github_username:  HarbinZhang # (your name)
+accent: "#f7f7e6" # accent color for blog column
 
-author:
-  name      : Haibin
-  image     : /assets/images/author.jpg
-  email     : seashore.real@gmail.com
-  url       : http://harbinfate.com
-  facebook  : http://facebook.com/haibin.zhang.12
-  twitter   : http://twitter.com/SayHarbin
-  instagram : http://instagram.com/harbinzhang
-  github    : http://github.com/binyuea
-  linkedin  : https://www.linkedin.com/in/haibin-zhang-486652100
-  bio       : "what"
+author: "Harbin"
+address: "Ann Arbor, Michigan"
+email: "seashore.real@gmail.com"
 
-exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md", "posts"]
+# google analytics tracking code, please change the value
+g_analytics: ""
+
+# language settings
+isolang: en
+
+# exclude files
+exclude:
+  - LICENSE
+  - README.md
