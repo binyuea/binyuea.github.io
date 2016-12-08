@@ -9,7 +9,8 @@
 
       <script type="text/javascript">
         var disqus_shortname = '{{ site.disqus_shortname }}';
-        var disqus_identifier = '{{ page.id }}';
+        // var disqus_identifier = '{{ page.id }}';
+        var disqus_identifier = '{{ post.url | prepend: site.baseurl }}';
         var disqus_title = '{{ page.title }}';
         var disqus_url = '{{ post.url | prepend: site.baseurl }}';
         /*var disqus_developer = 1;*/
