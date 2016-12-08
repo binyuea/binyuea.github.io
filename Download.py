@@ -5,7 +5,7 @@ import urllib
 import re
 from bs4 import BeautifulSoup
 from time import gmtime, strftime
-
+import os
 
 # url = 'http://mp.weixin.qq.com/s?__biz=MzA3MDM3MDYwMg==&mid=2653888920&idx=6&sn=ce64610af0a495c1159af89c1ec200ea&chksm=84e655ddb391dccb2918ba067fd05fab6a10ce7734167afda6d1eb7ee6959614637f155f6957&mpshare=1&scene=1&srcid=1208Y06Ofu0jGs5ej7hStjsn#rd'
 out_dir = '_posts/'
@@ -80,3 +80,7 @@ if __name__ == '__main__':
 	f = open('./posts/urls')
 	for line in f:
 		download(line)
+	# os.remove('./posts/urls')
+	# f = open('./posts/urls','w+')
+	f.close()
+
