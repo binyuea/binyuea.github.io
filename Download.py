@@ -62,7 +62,7 @@ def download(url):
 			if flag:
 				# print item.getText(),
 				if item.br:
-					f.write(item.getText().encode('utf-8')+'\n')
+					f.write(item.getText().encode('utf-8')+'  \n\n')
 				else:
 					f.write(item.getText().encode('utf-8'))
 			else:
