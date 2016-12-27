@@ -1,5 +1,5 @@
 # Site settings
-title: Project Pages
+title: Haibin Zhang
 description: "An Integrated Scientific Blogging Template"
 url: "http://www.harbinfate.com"
 
@@ -12,13 +12,13 @@ baseurl: ""
 header-img: img/home-bg.jpg
 headercolor: "#FFFFFF"
 # logo: /project-pages/img/logos/Project-Pages-New-Logo-Inverted.png
-logo: img/logos/Project-Pages-New-Logo-Inverted.png
+logo: img/logos/Project-Pages-New-Logo.png
 
 # Tertiary Parameters
-github_username:  projectpages
-project_repository: project-pages
-disqus_shortname: project-pages
-g-analytics: UA-75881392-1
+github_username:  binyuea
+# project_repository: 
+disqus_shortname: binyuea
+g-analytics: UA-88737101-2
 altmetric: true
 
 # Build settings
