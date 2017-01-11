@@ -7,10 +7,30 @@ subtitle:  	Obtained the cloud of points by laser & 360◦ scan, fitted to curve
 category:  projects
 ---
 
-
-
 - Scanning time 3min, accuracy 0.1mm, scan area 15*15*20(cm).
 - Color resolution of 256-level of each primary color in RGB format.
 
 
+<div style="text-align:center"><img src ="http://mmbiz.qpic.cn/mmbiz_png/IqicDAGdXNibtqa4TgIkIGuvlCPEfbZe8yk874lwo5BRsRAlkic2ZVMW0gw0ibXJWlQtx20R5gkBpRFdyzNiciaB2y3Q/640?wx_fmt=png"/></div>
+<br>
+Initially, establish the data set of point cloud. (There are some dead points)
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/p1.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+Remove the dead points(which typical info is bad).
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/p2.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
 
+The data of point cloud are fitted to obtain a smoother point set.
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/p3.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+
+Build the 3D model.
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/p4.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+
+Collect color information.
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/p5.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+
+The original thing.
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/p7.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>

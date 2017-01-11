@@ -3,6 +3,24 @@ layout:     post
 title:      3D Printer
 author:     Haibin
 tags: 		3D Printer
-subtitle:  	Based on Reprap, 
+subtitle:  	Based on Reprap
 category:  projects
 ---
+
+
+Based on Reprap architecture, heating PLA (plastic) to melt and cooling to solidify.
+
+<br>
+Printing.
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_printer/3d_printer.jpg " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+
+Rabbit.
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_printer/rabbit.jpg" | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+
+Dragon
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_printer/dragon1.jpg" | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_printer/dragon2.jpg" | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
