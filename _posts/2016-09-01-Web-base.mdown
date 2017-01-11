@@ -1,0 +1,15 @@
+---
+layout:     post
+title:      Online Photo Service
+author:     Haibin
+tags: 		Web Service
+subtitle:  	Building a web server which users can visit public and their own albums, and upload new photos to their albums.
+category:  projects
+---
+
+
+Building a web server which users can visit public and their own albums, and upload new photos to their albums.
+· Using Flask to build a web server, and html with Jinja2 to build web pages. Using JavaScript to build client-side
+application, and AJAX and JSON to transfer data between server and client browser.
+· Using session to keep users state, and SHA512 with salt to defend rainbow attack. Authorizing user permission
+to access sensitive pages depends on their sessions.
