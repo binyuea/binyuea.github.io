@@ -34,3 +34,12 @@ Collect color information.
 
 The original thing.
 <div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/p7.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+The effect we get in the end.
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/p8.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+And, There is another way to get the data model.
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/catch1.jpg " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/catch2.jpg " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+We found we can get a better result by using red background.
+<div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/catch3.jpg " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
