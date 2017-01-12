@@ -6,12 +6,31 @@ tags: 		FPGA Audio Guiter
 subtitle:  	Stereo of Electrical Guitar and relevant development. Amplified the signal, collected and processed with FPGA technology to realize various effects. Timely switched filters to realize the processing of audio data.
 category:  projects
 ---
-
-
 Leader,Innovation project mentored by Prof. Li Huiyong
 
 - Designed and welded the power supply, power amplifier circuit and loudspeaker. Adopted tube preamp and
 professional audio power amplifier chip to realize better effects.
-- Used Matlab to generate filter coefficients, imported them to FPGA and processed audio data with different
-filters, realized various effects.
-- Adopted pre-wiring, modified HDL files and employed Bitstream to reconfigure
+- Used Matlab to generate filter coefficients, imported them to FPGA and processed audio data with different filters, realized various effects.
+- Tried pre-wiring, modified HDL files and employed Bitstream to reconfigure. But failed : )
+
+
+
+The front stage by Electronic tube:
+<div style="text-align:center"><img src= "{{ "/img/projects/audio_system/1.jpg " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+Power amplifier:
+<div style="text-align:center"><img src= "{{ "/img/projects/audio_system/2.jpg " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+Running on me desk:
+<div style="text-align:center"><img src= "{{ "/img/projects/audio_system/3.jpg " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+Using FPGA and AD/DA to get and output electronic wave. Using filter made by FPGA to modify the sound effect.
+<div style="text-align:center"><img src= "{{ "/img/projects/audio_system/1.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+It can amplify electronic guiter's sound.
+<div style="text-align:center"><img src= "{{ "/img/projects/audio_system/2.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+It's the wave of electronic guiter's sound.
+<div style="text-align:center"><img src= "{{ "/img/projects/audio_system/4.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+Big sounder
+<div style="text-align:center"><img src= "{{ "/img/projects/audio_system/3.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>

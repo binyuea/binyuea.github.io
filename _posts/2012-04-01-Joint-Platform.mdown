@@ -7,8 +7,23 @@ subtitle:  	Employed FPGA technology to drive the camera to get data, displayed 
 category:  projects
 ---
 
-Leader,Electronic Sci. & Tech. Research Institute
+Leader, Electronic Sci. & Tech. Research Institute
 
 - Established NIOS core to control the camera, VGA and SARAM modes.
 - Self-defined communication protocol, made FPGA become the co-processor of STM32.
+
+FPGA is good at data computing and ARM is good at control. 
+
+So, we want to build a joint platform which ARM and FPGA can do they are good at.
+(I'm responsible for the FPGA part.)
+
+
+Use FPGA to drive CMOS image sensors, get image data, and cache it into the SDRAM. ARM loads these data from SDRAM, and then determine what to do depended on what we need. In this project, we used ARM stored these data into SD card as FAT32.
+
+This is the RTL of FPGA:
+<div style="text-align:center"><img src= "{{ "/img/projects/joint_platform/1.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+This is the platform:
+<div style="text-align:center"><img src= "{{ "/img/projects/joint_platform/2.jpg" | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+
 
