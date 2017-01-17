@@ -1,9 +1,16 @@
 ---
 layout: page
-title: "About"
-description: "Why use Project Pages?"
+title: "About me"
+description: "myself"
 header-img: "img/home-bg.jpg"
 ---
 
-Project Pages is a research blog tool that allows you to quickly show your latest results to an advisor, collaborators or your mom.
+
+
+I got 3rd prize in Electronic Design when I was a freshman, the 3rd prize is usually for people who joined this game. So, it's not a good result.  
+But you can see, when we were junior, we got some great results.
+
+So, maybe I cannot be great at first. But I would perform much better.
+
+
 	

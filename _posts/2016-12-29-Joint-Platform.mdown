@@ -3,14 +3,18 @@ layout:     post
 title:      Joint Development Platform
 author:     Haibin
 tags: 		FPGA ARM Camera
-subtitle:  	Employed FPGA technology to drive the camera to get data, displayed it on the VGA, then transferred them to STM32 and stored in SD card with the format of FAT32.
+subtitle:  	Just soso
 category:  projects
 ---
 
 Leader, Electronic Sci. & Tech. Research Institute
 
-- Established NIOS core to control the camera, VGA and SARAM modes.
-- Self-defined communication protocol, made FPGA become the co-processor of STM32.
+
+
+
+Employed FPGA technology to drive the camera to get data, displayed it on the VGA, then transferred them to STM32 and stored in SD card with the format of FAT32.  
+- Established NIOS core to control the camera, VGA and SARAM modes.  
+- Self-defined communication protocol, made FPGA become the co-processor of STM32.  
 
 FPGA is good at data computing and ARM is good at control. 
 

@@ -3,7 +3,7 @@ layout:     post
 title:      3D Printer
 author:     Haibin
 tags: 		3D Printer
-subtitle:  	Based on Reprap
+subtitle:  	When we were sophomore
 category:  projects
 ---
 

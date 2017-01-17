@@ -3,9 +3,11 @@ layout:     post
 title:      3D Color Laser Scanner
 author:     Haibin
 tags: 		3D Scanner
-subtitle:  	Obtained the cloud of points by laser & 360◦ scan, fitted to curved surface by Matlab and obtained the 3D model. Integrated the color information with coordinates.
+subtitle:  	When we were freshmen
 category:  projects
 ---
+
+Obtained the cloud of points by laser & 360◦ scan, fitted to curved surface by Matlab and obtained the 3D model. Integrated the color information with coordinates.
 
 - Scanning time 3min, accuracy 0.1mm, scan area 15*15*20(cm).
 - Color resolution of 256-level of each primary color in RGB format.

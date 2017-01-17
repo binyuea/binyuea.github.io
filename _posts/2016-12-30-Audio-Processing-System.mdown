@@ -3,11 +3,14 @@ layout:     post
 title:      Reconfigurable Digital Audio Processing System
 author:     Haibin
 tags: 		FPGA Audio Guiter
-subtitle:  	Stereo of Electrical Guitar and relevant development. Amplified the signal, collected and processed with FPGA technology to realize various effects. Timely switched filters to realize the processing of audio data.
+subtitle:  	self-interetsed, just like Guitar amplifier
 category:  projects
 ---
 Leader,Innovation project mentored by Prof. Li Huiyong
 
+
+
+Stereo of Electrical Guitar and relevant development. Amplified the signal, collected and processed with FPGA technology to realize various effects. Timely switched filters to realize the processing of audio data.  
 - Designed and welded the power supply, power amplifier circuit and loudspeaker. Adopted tube preamp and
 professional audio power amplifier chip to realize better effects.
 - Used Matlab to generate filter coefficients, imported them to FPGA and processed audio data with different filters, realized various effects.
