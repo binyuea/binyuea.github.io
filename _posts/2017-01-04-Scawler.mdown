@@ -16,6 +16,7 @@ Build up Multi-process scawlers, sending jobs to master, and master assigned job
 
 <div style="text-align:center"><img src= "{{ "/img/projects/scawler/initial_start.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
 <br>
+
 ### Initial state
 At first, "python master.py" to start master process, and master will build workers based on the number of accounts it received. Each worker would receive an account and its password. When worker finished login into the linkedin account, it sent the "ready" message to the master.
 Workers use phantomJS to access linkedin user profiles.
@@ -37,11 +38,17 @@ You can send "shutdown" signal to the master.
 When number of errors reached the bar, the master will shutdown workers, and backup urls in the master to disk, and record current information into logfile to analyse.
 <div style="text-align:center"><img src= "{{ "/img/projects/scawler/fault_restart.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
 <br>
-master
 
+### database
+Record these information about users:
+- url_id(as the primary key)
+- name, current_company, locality, edu, title, industry
+- skills, backgrounds(These include several sub contents)
+<div style="text-align:center"><img src= "{{ "/img/projects/scawler/eg_db.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
 
 
 # Problem
-It seems that Linkedin constrains accounts when the same IP visited its website too many times. I extended the time delay, but it cannot work.   
-I'm trying to use different IP proxy from IP pool to visit different users.   
+It seems that Linkedin constrains accounts when the same IP visited its website too many times. I extended the time delay, but it cannot work.  
+I'm trying to use different IP proxy from IP pool to visit different users.  
 I'm still working on it.
