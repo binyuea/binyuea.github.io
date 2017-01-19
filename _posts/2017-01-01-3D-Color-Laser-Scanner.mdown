@@ -13,8 +13,6 @@ Obtained the cloud of points by laser & 360◦ scan, fitted to curved surface by
 - Color resolution of 256-level of each primary color in RGB format.
 
 
-<div style="text-align:center"><img src ="http://mmbiz.qpic.cn/mmbiz_png/IqicDAGdXNibtqa4TgIkIGuvlCPEfbZe8yk874lwo5BRsRAlkic2ZVMW0gw0ibXJWlQtx20R5gkBpRFdyzNiciaB2y3Q/640?wx_fmt=png"/></div>
-<br>
 Initially, establish the data set of point cloud. (There are some dead points)
 <div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/p1.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
 <br>
@@ -45,3 +43,7 @@ And, There is another way to get the data model.
 <div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/catch2.jpg " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
 We found we can get a better result by using red background.
 <div style="text-align:center"><img src= "{{ "/img/projects/3d_scanner/catch3.jpg " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+And this is the result we get.
+
+<!-- <div style="text-align:center"><object width="100%" height="40%" data="{{ "/img/projects/3d_scanner/kk.swf " | prepend: site.baseurl }}"></object></div> -->
+<div style="text-align:center"><embed volumn = "0" AUTOSTART = "false" src = "{{ "/img/projects/3d_scanner/kk.swf " | prepend: site.baseurl }}" > </div>
