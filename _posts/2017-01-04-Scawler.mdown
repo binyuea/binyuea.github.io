@@ -50,5 +50,6 @@ Record these information about users:
 
 # Problem
 It seems that Linkedin constrains accounts when the same IP visited its website too many times. I extended the time delay, but it cannot work.  
-I'm trying to use different IP proxy from IP pool to visit different users.  
+I'm trying to use different IP proxy from IP pool to visit different users profile.  
+  
 I'm still working on it.
