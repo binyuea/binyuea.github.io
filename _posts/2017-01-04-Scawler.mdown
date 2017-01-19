@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Info for Linkedin
+title:      Info from Linkedin
 author:     Haibin
 tags: 		Scawler Multi-process MapReduce
 subtitle:  	I'm still working on it.
@@ -12,7 +12,7 @@ I want to find out the relationship between linkedin users and the possibility t
 
 
 # Part 1
-Build up Multi-process scawlers, sending jobs to master, and master assigned jobs to workers. Save users profile into mongodb. Use mongodb to do MapReduce to get the propor value.
+Multi-process scawlers, sending jobs to master, and master assigned jobs to workers. Save users profile into mongodb. MapReduce with mongodb to analyse data.
 
 <div style="text-align:center"><img src= "{{ "/img/projects/scawler/initial_start.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
 <br>
