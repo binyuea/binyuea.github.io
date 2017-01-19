@@ -40,10 +40,10 @@ When number of errors reached the bar, the master will shutdown workers, and bac
 <br>
 
 ### database
-Record these information about users:
-- url_id(as the primary key)
-- name, current_company, locality, edu, title, industry
-- skills, backgrounds(These include several sub contents)
+Record these information about users:  
+- url_id(as the primary key)  
+- name, current_company, locality, edu, title, industry  
+- skills, backgrounds(These include several sub contents)  
 <div style="text-align:center"><img src= "{{ "/img/projects/scawler/eg_db.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
 <br>
 
