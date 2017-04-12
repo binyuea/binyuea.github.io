@@ -6,6 +6,28 @@ header-img: "img/home-bg.jpg"
 ---
 
 
+<h3>2-way R10K : An out of order true renaming register processor</h3>
+In this project, I'm in charge of RS, I/D cache, fetch, prefetch, predictor, CDB.
+<ul align="left">
+<li>Dcache: Using 2-way set associate cache and LRU(refer, dirty bit) algorithm to determine which block will be evicted to memory can decrease the usage for I/O of memory.</li>
+<li>Icache: Directed map cache, easy to implement, and it fits to instruction fetch features.</li>
+<li>Prefetch: For higher usage I/O of memory, prefetch allocate I/O accroding to this priority order(from high to low): Dcache load, Icache load, Icache prefetch, Dcache store.</li>
+<li>RS(reserve station): Recording each instruction state, and determine which instruction to issue. I allocated different blocks to corresponding insn. In this way, we can issue at most 6 instructions(2 alu, 1 store, 1 load, 1 mult, 1 branch), which can improve system potential performance.</li>
+</ul>
+
+<h3>Pipeline : EECS470(Computer architecture)</h3>
+Providing implementation of VeriSimple4 to handle hazards and forwarding. In this way, the CPI can be decreased from 5 to 2.
+
+
+
+<h3>Threads and Concurrency : EECS482(Operating System)</h3>
+<ul align="left">
+<li>Project 1: A simple concurrent program that schedules disk requests, based on multi-threaded programs using monitors.
+</li>
+ <li>Project 2: Implement a thread library: Threads and monitors are implemented on uniprocessor and multiprocessor systems.</li>
+<li>Project 3: Pager for memory manager: A part of kernel that manages application processes' virtual address spaces, including swap block(private) and file block(public).</li>
+<li>Project 4: Network file system: A multi-threaded, secure network file server. Clients that use file server will interact with it via sockets.</li>
+</ul>
 
 
 
@@ -17,15 +39,6 @@ Building a web server which users can visit public and personal albums, and uplo
 </ul>
 
 
-<h3>Threads and Concurrency : EECS482(Operating System)</h3>
-<ul align="left">
-<li>Project 1: A simple concurrent program that schedules disk requests, based on multi-threaded programs using monitors.
-</li>
- <li>Project 2: Implement a thread library: threads and monitors are implemented on uniprocessor and multiprocessor systems.</li>
-</ul>
-
-<h3 >Pipeline : EECS470(Computer architecture)</h3>
-Using verilog, Extend the VeriSimple4 pipeline to support full hazard detection and bypassing. 
 
 
 
