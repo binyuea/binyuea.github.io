@@ -1,0 +1,58 @@
+---
+layout:     post
+title:      TimeGo
+author:     Haibin
+tags: 		Android Time
+subtitle:  	self-interested time tracking APP
+category:  projects
+---
+
+This is an Android APP published on Google Play.  
+You can search for it by the keyword "TimeGo".  
+
+<a href="https://play.google.com/store/apps/details?id=com.timego.harbin.timego&hl=en">Or you can click here : )</a>
+
+I built this APP is because there isn't a right APP to solve my problem.
+
+## Why is this a bad design?
+This is one of the most common APPs about time tracking in google play.
+<div style="text-align:center"><img src= "{{ "/img/projects/timego/atimelogger.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+You clicked an icon, the timer starts recording. When you finished your activity, you clicked the stop button. Then this activity and its duration has been recorded.  
+But there is a common problem: I always forget to start or end an activity recording, so the time tracking is not precise, and therefore it is annoying.
+
+## How to solve this problem?
+Raised an idea from "time billing" of Alexander Alexandrovich Lyubishchev.  
+
+The key is to record the time cost of each activity after the things done or at a certain moment. In this way, the time tracking is easier and more precise.
+
+## What is it look like?  
+- The adding fragment screen is like:  
+
+<div style="text-align:center"><img src= "{{ "/img/projects/timego/add.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+And I provided the emotion options for users, which can be defined as an efficiency options. Because I think 100% efficiency in 30 minutes is still much better than 10% efficiency in 3 hours.  
+So, these options can help users to find out during which time slot they can get a better performance.  
+
+- The dash board: 
+
+<div style="text-align:center"><img src= "{{ "/img/projects/timego/dash.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+This is a pie chart. Day, week and month options are provided.
+<br>
+<div style="text-align:center"><img src= "{{ "/img/projects/timego/dashline.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+This is a line chart. Users can see how the time costing trends they spent in the last week.
+<br>  
+
+- The Accounts  
+TimeGo provided online database based on the Google firebase to sync data from different platform.  
+So, we have Sign in option:
+
+<div style="text-align:center"><img src= "{{ "/img/projects/timego/signin.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+And Sign up option:
+<div style="text-align:center"><img src= "{{ "/img/projects/timego/signup.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+
+## Summary  
+I love this APP, I always think of ways to improve it.  
+And I'm still working on it.  
+Hope it may help your life well. : )

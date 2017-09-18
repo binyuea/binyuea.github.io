@@ -1,0 +1,81 @@
+---
+layout:     post
+title:      NOVA
+author:     Haibin
+tags: 		Android Web firebase
+subtitle:  	Software developer intern in Summer 2017
+category:  projects
+---
+## Introduce
+This is a demo.  
+So, there are still lots of improvement can be made. And all things following are developed by myself.
+
+The goal is to build an Android APP for users and a web server for doctors. These functions are provided:  
+1. Doctors can set medicine reminder for their patients.  
+2. Users can set appointment with their doctors.  
+3. Users can get their vital data (E.g Blood pressure) from iHealth products.  
+
+
+## Medicine Reminder
+Doctors can add/modify medicine reminder. Android APP will update it from online database, and set reminder alarm automatically.
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/medicine.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+
+When the reminder alarms, it shows like this first:
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/alarmReminder.png " | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+
+After users clicked "OK", it will enter into the medicine detail screen, which like this:
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/alarmIn.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+You can see that, the alarming medicine's button is red, to remind users which one should be taken. After users clicked the red button, the button becomes grey, which means users have taken this medicine. Like this:
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/alarmAfter.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+When there is another reminder alarms, the same progress will be executed again. But the privious status will be recorded. Like this:
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/alarmRe.png " | prepend: site.baseurl }}" style="width: 20%; margin-left: 20%; margin-right: 20%;"></div>
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/alarmReAfter.png " | prepend: site.baseurl }}" style="width: 20%; margin-left: 20%; margin-right: 20%;"></div>
+<br>
+
+
+In this way, we can gather whether users have taken their medicine on time, and display this information in our web server.
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/medicine_status.png " | prepend: site.baseurl }}" style="width: 100%; "></div>
+<br>
+The "Y" here means the user has taken his/her medicine. 
+This screen is so ugly. I know that, but this is for some professional user like doctors. So this UI is not the most important thing to solve.  
+
+## Appointment
+In appointment part, users can see doctors available time and set an appointment with their doctor. When they enter into "Appointment", the doctor's available time will show first, like:
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/appointmentInit.png " | prepend: site.baseurl }}" style="width: 60%; "></div>
+<br>
+
+The confirmation will show after long pressing at a time slot.
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/appointment.png " | prepend: site.baseurl }}" style="width: 60%; "></div>
+<br>
+
+And you can cancel an appointment by long pressing at it.
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/appointmentCancel.png " | prepend: site.baseurl }}" style="width: 60%; "></div>
+<br>
+
+You cannot set an appointment which has been reserved by others. So, invalid reserved time slot will show as "occupied":
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/occupied.png " | prepend: site.baseurl }}" style="width: 60%; "></div>
+<br>
+
+This is a doctor's view of appointment:
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/appointmentDoctor.png " | prepend: site.baseurl }}" style="width: 100%; "></div>
+<br>
+
+## Vital data
+By connecting iHealth products, we can help user get their vital data.
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/ihealth.png " | prepend: site.baseurl }}" style="width: 40%; "></div>
+<br>
+
+
+## summary
+
+This is the main screen of Android APP.
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/main.png " | prepend: site.baseurl }}" style="width: 60%; "></div>
+<br>
+
+I have developed Medicine reminders, Appointments, user login, sign up, emergency call, Access healthcare records, measure vitals. 
+
+The first two are big parts. The rest of them are easy.
