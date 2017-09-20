@@ -47,6 +47,8 @@ This screen is so ugly. I know that, but this is for some professional user like
 In appointment part, users can see doctors available time and set an appointment with their doctor. When they enter into "Appointment", the doctor's available time will show first, like:
 <div style="text-align:center"><img src= "{{ "/img/projects/nova/appointmentInit.png " | prepend: site.baseurl }}" style="width: 60%; "></div>
 <br>
+And users cannot set an appointment in inaviable time of their doctor's.
+
 
 The confirmation will show after long pressing at a time slot.
 <div style="text-align:center"><img src= "{{ "/img/projects/nova/appointment.png " | prepend: site.baseurl }}" style="width: 60%; "></div>
@@ -70,9 +72,19 @@ By connecting iHealth products, we can help user get their vital data.
 <br>
 
 
+## System optimization
+I have designed the discrete databases for this system. 
+
+
+The online database only stores the useful data such as user information.   
+
+And in local database, each reminder date of a medicine is one row in database, so we can let the sql do the search thing.   
+
+In this design, we use local computation and storage resource as many as possible, which can save the data traffic and our website cost.  
+
 ## summary
 
-This is the main screen of Android APP.
+This is the main screen of Android APP. (This part is made by others)
 <div style="text-align:center"><img src= "{{ "/img/projects/nova/main.png " | prepend: site.baseurl }}" style="width: 60%; "></div>
 <br>
 

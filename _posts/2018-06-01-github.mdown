@@ -1,0 +1,20 @@
+---
+layout:     post
+title:      Github
+author:     Haibin
+tags:		github
+subtitle:  	A link to github profile
+category:  link
+---
+
+# My github 
+HarbinZhang  
+
+<a href="https://github.com/HarbinZhang">To Github : )</a>  
+
+All works in "mater" branch are done by myself.  
+
+Thank you for your time.  
+
+May you be happy : )
+

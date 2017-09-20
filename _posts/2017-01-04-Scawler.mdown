@@ -2,8 +2,8 @@
 layout:     post
 title:      Info from Linkedin
 author:     Haibin
-tags: 		Scawler Multi-process MapReduce
-subtitle:  	I'm still working on it.
+tags: 		Crawler Multi-process MapReduce
+subtitle:  	a web crawler scanning data from Linkedin.
 category:  projects
 ---
 

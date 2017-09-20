@@ -25,5 +25,5 @@ Dragon
 <div style="text-align:center"><img src= "{{ "/img/projects/3d_printer/dragon2.jpg" | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
 <br>
 
-The weight of we printed portrait.
+The weight of our printed portrait.
 <div style="text-align:center"><img src= "{{ "/img/projects/3d_printer/weight.jpg" | prepend: site.baseurl }}" style="width: 60%; margin-left: 20%; margin-right: 20%;"></div>
