@@ -43,6 +43,19 @@ This is a pie chart. Day, week and month options are provided.
 This is a line chart. Users can see how the time costing trends they spent in the last week.
 <br>  
 
+- Intro to App  
+To let it used easier for users, provide intro-to-APP part. It shows when the user open TimeGo in the first time, Or when users click "help" button.
+
+
+<div style="text-align:center"><img src= "{{ "/img/projects/timego/intro.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+
+
+- Feedback  
+Provide feedback choice for users, and users can talk their ideas with me. I think this communication way is better for us to talk with each other, to have a deeper understanding about what this product shoule be.  
+
+<div style="text-align:center"><img src= "{{ "/img/projects/timego/feedback.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+
+
 - The Accounts  
 TimeGo provided online database based on the Google firebase to sync data from different platform.  
 So, we have Sign in option:
@@ -51,6 +64,7 @@ So, we have Sign in option:
 And Sign up option:
 <div style="text-align:center"><img src= "{{ "/img/projects/timego/signup.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
 <br>
+
 
 ## Summary  
 I love this APP, I always think of ways to improve it.  
