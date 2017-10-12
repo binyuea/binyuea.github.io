@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      NOVA
+title:      NOVA (Internship)
 author:     Haibin
 tags: 		Android Web firebase
 subtitle:  	Software developer intern in Summer 2017
@@ -8,7 +8,7 @@ category:  projects
 ---
 ## Introduce
 This is a demo.  
-So, there are still lots of improvement can be made. And all things following are developed by myself.
+The most challenging part is at the bottom. And all things following are developed by myself.
 
 The goal is to build an Android APP for users and a web server for doctors. These functions are provided:  
 1. Doctors can set medicine reminder for their patients.  
@@ -81,6 +81,44 @@ The online database only stores the useful data such as user information.
 And in local database, each reminder date of a medicine is one row in database, so we can let the sql do the search thing.   
 
 In this design, we use local computation and storage resource as many as possible, which can save the data traffic and our website cost.  
+
+
+## The most challenging part
+The first design version is:
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/reminder_old.png " | prepend: site.baseurl }}" style="width: 60%; "></div>
+<br>
+It's easy to implement, the database table is just like the column name.  
+And the second version is:
+<div style="text-align:center"><img src= "{{ "/img/projects/nova/reminder_new.png " | prepend: site.baseurl }}" style="width: 60%; "></div>
+<br>
+Only today's medicine reminders are shown.  
+And manager required that the medicine should be reminded at intervals(like in two days), rather than weekday.  
+
+It is hard to implement, because database cannot query today's reminders directly.  
+
+#### The basic idea is to set a start date and remind period.  
+When users enter into medicine reminder, database will get all data and calculate whether each reminder should be shown on the screen or not.  
+This way is bad, because we do so much searching outside of database. For we are using online database, it will cost a lot on data transfer. The database should provide the items we need directly.   
+
+#### The second idea is to set a next remind date, and update it after it's shown.  
+This way can save data traffic, we don't need to query all data in database, just the data we need. But we still need to write to the database everytime we used the data.  
+
+#### finally, I designed a distributed database for this problem.
+The online database just keep the start date and its period. When doctors add or update a medicine reminder, the local database will receive this signal and compute all reminder dates, each one will be inserted into local database as a single record.  
+
+- Just like 
+<pre><code class="language-java">// online database
+name:medicineA 		startDate:2017/10/12 	period:2 	duration:1week	
+
+// local database should look like
+name:medicineA 		remindDate:2017/10/12
+name:medicineA 		remindDate:2017/10/14
+name:medicineA 		remindDate:2017/10/16
+name:medicineA 		remindDate:2017/10/18
+</code></pre>
+In this way, we can query the results we need and don't need to update the database every time when we query it.  
+
+It takes more local computing resources and storage, but saves storage and data traffic of online database. I think in this way, the system becomes more scalable.
 
 ## summary
 
