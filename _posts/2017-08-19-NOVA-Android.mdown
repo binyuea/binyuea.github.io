@@ -71,18 +71,6 @@ By connecting iHealth products, we can help user get their vital data.
 <div style="text-align:center"><img src= "{{ "/img/projects/nova/ihealth.png " | prepend: site.baseurl }}" style="width: 40%; "></div>
 <br>
 
-
-## System optimization
-I have designed the discrete databases for this system. 
-
-
-The online database only stores the useful data such as user information.   
-
-And in local database, each reminder date of a medicine is one row in database, so we can let the sql do the search thing.   
-
-In this design, we use local computation and storage resource as many as possible, which can save the data traffic and our website cost.  
-
-
 ## The most challenging part
 The first design version is:
 <div style="text-align:center"><img src= "{{ "/img/projects/nova/reminder_old.png " | prepend: site.baseurl }}" style="width: 60%; "></div>
@@ -116,9 +104,9 @@ name:medicineA 		remindDate:2017/10/14
 name:medicineA 		remindDate:2017/10/16
 name:medicineA 		remindDate:2017/10/18
 </code></pre>
-In this way, we can query the results we need and don't need to update the database every time when we query it.  
+In this way, we can get the results we need directly and don't need to update the database every time when we query it. The online database only stores the useful data such as user information. 
 
-It takes more local computing resources and storage, but saves storage and data traffic of online database. I think in this way, the system becomes more scalable.
+In this design, we use local computing and storage resources as many as possible, which can save the data traffic and our website cost. I think in this way, the system becomes more scalable.
 
 ## summary
 
