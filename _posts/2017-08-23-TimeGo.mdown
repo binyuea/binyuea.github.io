@@ -35,12 +35,11 @@ And I provided the emotion options for users, which can be defined as an efficie
 So, these options can help users to find out during which time slot they can get a better performance.  
 
 - The dash board: 
-
-<div style="text-align:center"><img src= "{{ "/img/projects/timego/dash.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
 This is a pie chart. Day, week and month options are provided.
+<div style="text-align:center"><img src= "{{ "/img/projects/timego/dash.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
 <br>
-<div style="text-align:center"><img src= "{{ "/img/projects/timego/dashline.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
 This is a line chart. Users can see how the time costing trends they spent in the last week.
+<div style="text-align:center"><img src= "{{ "/img/projects/timego/dashline.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
 <br>  
 
 - Intro to App  
