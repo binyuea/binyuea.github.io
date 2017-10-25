@@ -67,5 +67,6 @@ And Sign up option:
 
 ## Summary  
 I love this APP, I always think of ways to improve it.  
-And I'm still working on it.  
+And I'm still working on it. I have so many ideas which I want to implment. But the time is limited, I need to get focused on the most essential thing.
+ <div style="text-align:center"><img src= "{{ "/img/projects/timego/todo.png " | prepend: site.baseurl }}" style="width: 80%; margin-left: 5%; margin-right: 5%;"></div>
 Hope it may help your life well. : )
