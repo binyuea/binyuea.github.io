@@ -1,0 +1,19 @@
+---
+layout:     post
+title:      Github
+author:     Haibin
+tags:		github
+subtitle:  	determine their own id, and provide host IP to each other
+category:  projects
+---
+
+## zookeeper automation
+Basically, it's like if you have 5 machines, how to generate an unique id on their own.  
+
+From Raft, we can elect a leader first, and then determine Id for each machine.  
+### But 
+Using Raft to elect a leader is complecated. For this case, we may have a much easier solution.
+### we can let machines follow one common rule to decide which Id they should get.  
+
+In my implementaion, I choose their IP as the common key, and their ID can be determined by their IP order in the sorted IPs.
+<a href="https://github.com/HarbinZhang/zookeeper_automation">More details</a>

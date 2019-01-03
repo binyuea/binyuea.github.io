@@ -12,9 +12,8 @@ You can search for it by the keyword "TimeGo".
 
 <a href="https://play.google.com/store/apps/details?id=com.timego.harbin.timego&hl=en">Or you can click here : )</a>
 
-I built this APP is because there isn't a right APP to solve my problem.
-
-## Why is this a bad design?
+## I built this APP is because there isn't a right APP to solve my problem.
+#### Why is this a bad design?
 This is one of the most common APPs about time tracking in google play.
 <div style="text-align:center"><img src= "{{ "/img/projects/timego/atimelogger.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
 <br>
