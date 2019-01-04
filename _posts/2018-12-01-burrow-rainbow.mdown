@@ -14,11 +14,11 @@ The main work is about Rainbow, which pulls information from Burrow, translates 
 I implemented push-model rainbow(waiting for Burrow message) at first, but got some problem. The Burrow notifier is not stable all the time. After discussed with teammates, I implemented pull-model rainbow(activly pull information from Burrow) and now it works much better.  
 
 ### Dashboard
-- Lag
+- Lag (Hold the picture to zoom in)
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/lag.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
-- Total traffic
+- Total traffic (Hold the picture to zoom in)
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/totalTraffic.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
-- Each env traffic
-<div style="text-align:center"><img src= "{{ "/img/projects/burrow/eachTraffic.png" | prepend: site.baseurl }}" style="width: 120%; margin-left: 0%; margin-right: 0%;"></div>
+- Each env traffic (Hold the picture to zoom in)
+<div style="text-align:center"><img src= "{{ "/img/projects/burrow/eachTraffic.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 ### Link
 <a href="https://github.com/HarbinZhang/goRainbow">More details</a>
