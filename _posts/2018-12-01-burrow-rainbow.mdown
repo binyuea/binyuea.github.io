@@ -3,7 +3,7 @@ layout:     post
 title:      Burrow Rainbow
 author:     Haibin
 tags:		github kafka go
-subtitle:  	determine their own id, and provide host IP to each other
+subtitle:  	Burrow service provides partition level lag for Apache Kafka
 category:  projects
 ---
 ## Burrow Rainbow
