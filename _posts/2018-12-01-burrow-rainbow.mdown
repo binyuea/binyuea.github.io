@@ -7,7 +7,9 @@ subtitle:  	determine their own id, and provide host IP to each other
 category:  projects
 ---
 ## Burrow Rainbow
-I'm in charge of Burrow service, including Dockerfile, ansible-quasar, Jenkinsfile for CICD, goRainbow and wavefront dashboard.
+Burrow is a monitoring companion for Apache Kafka that provides consumer lag checking as a service without the need for specifying thresholds. It monitors committed offsets for all consumers and calculates the status of those consumers on demand. An HTTP endpoint is provided to request status on demand, as well as provide other Kafka cluster information. There are also configurable notifiers that can send status out via email or HTTP calls to another service.  
+
+In Zuora, I'm in charge of Burrow service, including Dockerfile, ansible-quasar, Jenkinsfile for CICD, goRainbow and wavefront dashboard.  
 
 The main work is about Rainbow, which pulls information from Burrow, translates it into metrics, and sends it to the wavefront.  
 
@@ -16,9 +18,12 @@ I implemented push-model rainbow(waiting for Burrow message) at first, but got s
 ### Dashboard
 - Lag (Hold the picture to zoom in)
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/lag.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
+<br>
 - Total traffic (Hold the picture to zoom in)
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/totalTraffic.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
+<br>
 - Each env traffic (Hold the picture to zoom in)
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/eachTraffic.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
+<br>
 ### Link
 <a href="https://github.com/HarbinZhang/goRainbow">More details</a>
