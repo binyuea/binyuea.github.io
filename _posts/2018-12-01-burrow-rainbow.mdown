@@ -9,7 +9,7 @@ category:  projects
 ## Burrow Rainbow
 #### What is Burrow
 Burrow is a monitoring companion for Apache Kafka that provides consumer lag checking as a service without the need for specifying thresholds. It monitors committed offsets for all consumers and calculates the status of those consumers on demand. An HTTP endpoint is provided to request status on demand, as well as provide other Kafka cluster information. There are also configurable notifiers that can send status out via email or HTTP calls to another service.  
-
+ 
 Here is my inspection of Burrow source code.<a href="https://github.com/HarbinZhang/goRainbow/tree/master/burrow">Burrow Inspection</a>
 #### What is my work
 In Zuora, I'm in charge of Burrow service, including Dockerfile, ansible-quasar, Jenkinsfile for CICD, goRainbow and wavefront dashboard.  
@@ -22,10 +22,10 @@ I implemented push-model rainbow(waiting for Burrow message) at first, but got s
 1. Heath-check: It provides health-check HTTP service so that AWS can auto restart Burrow-goRainbow when the service is unavailable.
 2. Dynamic metric sending:
    1. It sends partition level metrics when lag exists. Also it guarantees every metric starts from 0 and ends with 0, which shows better in wavefront.
-   2. It sends;
-    metrics per 30s when metrics change and per 60s for unchanged metrics.
+   2. It sends metrics per 30s when metrics change and per 60s for unchanged metrics.  
+
 ### Link
-<a href="https://github.com/HarbinZhang/goRainbow">More details</a>
+goRainbow github link <a href="https://github.com/HarbinZhang/goRainbow">More details</a>
 
 ### Dashboard
 - Lag (Hold the picture to zoom in)
