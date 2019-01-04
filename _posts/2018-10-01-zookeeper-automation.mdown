@@ -19,4 +19,5 @@ we can let machines follow one common rule to decide which Id they should get.
 In my implementaion, I choose their IP as the common key, and their ID can be determined by their IP order in the sorted IPs.
 
 ### Link
+You may check logic charts and more details via this link.
 <a href="https://github.com/HarbinZhang/zookeeper_automation">More details</a>

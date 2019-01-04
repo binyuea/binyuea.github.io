@@ -15,10 +15,10 @@ I implemented push-model rainbow(waiting for Burrow message) at first, but got s
 
 ### Dashboard
 - Lag
-<div style="text-align:center"><img src= "{{ "/img/projects/burrow/lag.png" | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+<div style="text-align:center"><img src= "{{ "/img/projects/burrow/lag.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 20%; margin-right: 20%;"></div>
 - Total traffic
-<div style="text-align:center"><img src= "{{ "/img/projects/burrow/totalTraffic.png" | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+<div style="text-align:center"><img src= "{{ "/img/projects/burrow/totalTraffic.png" | prepend: site.baseurl }}" style="width: 80%; margin-left: 0%; margin-right: 0%;"></div>
 - Each env traffic
-<div style="text-align:center"><img src= "{{ "/img/projects/burrow/eachTraffic.png" | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+<div style="text-align:center"><img src= "{{ "/img/projects/burrow/eachTraffic.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 100%; margin-right: 100%;"></div>
 ### Link
 <a href="https://github.com/HarbinZhang/goRainbow">More details</a>

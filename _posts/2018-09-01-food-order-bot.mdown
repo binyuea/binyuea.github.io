@@ -13,7 +13,8 @@ It's a slack bot, The reason I wrote this bot is because I don't want to manuall
 
 So, This bot would remind all engineers in food channel to order and also remind people who calls the bot to close the food order.   
 
-Besides, the bot would send a food review after lunch to gather information from engineers. In this way, I may get suggestions which restaurant is more fit to our engineers.
+Besides, the bot would send a food review after lunch to gather reviews from engineer. In this way, we may get suggestions which restaurant is more fit to our engineers.
 
 ### Link
+You may check pictures and more details via this link.
 <a href="https://github.com/HarbinZhang/food-order-bot">More details</a>
