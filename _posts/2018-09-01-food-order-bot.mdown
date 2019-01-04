@@ -2,7 +2,7 @@
 layout:     post
 title:      Food Order Bot
 author:     Haibin
-tags:		github
+tags:		github python flask
 subtitle:  	A slack-bot for reminding engineers to order, to review restaurants
 category:  projects
 ---

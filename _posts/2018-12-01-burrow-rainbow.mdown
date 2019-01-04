@@ -2,15 +2,23 @@
 layout:     post
 title:      Burrow Rainbow
 author:     Haibin
-tags:		github
+tags:		github kafka go
 subtitle:  	determine their own id, and provide host IP to each other
 category:  projects
 ---
 ## Burrow Rainbow
+I'm in charge of Burrow service, including Dockerfile, ansible-quasar, Jenkinsfile for CICD, goRainbow and wavefront dashboard.
 
-It's mainly about Rainbow, which pulls information from Burrow, translates it into metrics, and sends it to the wavefront.  
+The main work is about Rainbow, which pulls information from Burrow, translates it into metrics, and sends it to the wavefront.  
 
 I implemented push-model rainbow(waiting for Burrow message) at first, but got some problem. The Burrow notifier is not stable all the time. After discussed with teammates, I implemented pull-model rainbow(activly pull information from Burrow) and now it works much better.  
 
+### Dashboard
+- Lag
+<div style="text-align:center"><img src= "{{ "/img/projects/burrow/lag.png" | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+- Total traffic
+<div style="text-align:center"><img src= "{{ "/img/projects/burrow/totalTraffic.png" | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+- Each env traffic
+<div style="text-align:center"><img src= "{{ "/img/projects/burrow/eachTraffic.png" | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
 ### Link
 <a href="https://github.com/HarbinZhang/goRainbow">More details</a>

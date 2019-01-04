@@ -15,7 +15,7 @@ You can search for it by the keyword "TimeGo".
 ## I built this APP is because there isn't a right APP to solve my problem.
 #### Why is this a bad design?
 This is one of the most common APPs about time tracking in google play.
-<div style="text-align:center"><img src= "{{ "/img/projects/timego/atimelogger.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
+<div style="text-align:center"><img src= "{{ "/img/projects/timego/atimelogger.png" | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
 <br>
 You clicked an icon, the timer starts recording. When you finished your activity, you clicked the stop button. Then this activity and its duration has been recorded.  
 But there is a common problem: I always forget to start or end an activity recording, so the time tracking is not precise, and therefore it is annoying.
