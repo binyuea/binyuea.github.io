@@ -31,6 +31,9 @@ goRainbow github link <a href="https://github.com/HarbinZhang/goRainbow">More de
 - Lag (Hold the picture to zoom in)
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/lag.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 <br>
+- Lag details (Hold the picture to zoom in)
+<div style="text-align:center"><img src= "{{ "/img/projects/burrow/thl_raw.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
+<br>
 - Total traffic (Hold the picture to zoom in)
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/totalTraffic.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 <br>
