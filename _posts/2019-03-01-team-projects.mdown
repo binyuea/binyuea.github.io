@@ -1,0 +1,23 @@
+---
+layout:     post
+title:      team projects
+author:     Haibin
+tags:		kafka microservice tungsten
+subtitle:  	some team projects which I am the main code contributor
+category:  projects
+---
+## Start
+These are team projects of my company, so I cannot provide too much detail data. But feel free to talk about the design and implementation.
+
+### Tenant Filter
+The Tenant Filter is 
+The idea is from my manager, I just implement his idea.
+already deployed to production, with a great performance improvement. (latency from 10 min to 10s).
+
+key word:
+cache.refresh(non-blocking)
+cache size: only one key.
+### TopicMessage API
+An API can GET/POST record from/to a specific position(topic, partition, offset) in Kafka.
+
+Different topic has different Serializer/Deserializer.
