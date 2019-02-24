@@ -26,7 +26,10 @@ I implemented push-model rainbow(waiting for Burrow message) at first, but got s
 
 ### Link
 goRainbow github link <a href="https://github.com/HarbinZhang/goRainbow">More details</a>
-
+<div style="text-align:center"><img src= "{{ "/img/projects/burrow/rainbow_structure.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
+1. Each `consumer handler` is responsible for one consumer and has one specific url(`burrow/{cluster}/{consumer}`) to pull the consumer info from Burrow.
+2. `alive consumers maintainer` checks Burrow periodically to see whether there is a new consumer or not. If so, it would raise a new `consumer handler` for the new consumer.
+3. `consumer handler` would deregister itself in `alive consumers maintainer` when its consumer is not valid any longer.
 ### Dashboard
 - Lag (Hold the picture to zoom in)
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/lag.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
