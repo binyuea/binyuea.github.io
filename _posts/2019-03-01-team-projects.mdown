@@ -46,14 +46,14 @@ For the second problem, we do have some trade-off:
 *Topic name to Kafka record deserializer*
 1. no mapping: not doable
 2. 1-to-1 mapping: like "NotificationV2" -> "NotificationInstanceDeserializer" and "NotificationForDC" -> "NotificationInstanceDeserializer" are different entries in mapping.
-    1. Pros: 
-        1. easy to implement.  
-        2. support Logic topic name to physical one. DIY  
-        3. restrict user input.  
-    2. Cons:
-        1. need to maintain this mapping every time topic or deserializer updates.  
+    - Pros: 
+        - easy to implement.  
+        - support Logic topic name to physical one. DIY  
+        - restrict user input.  
+    - Cons:
+        - need to maintain this mapping every time topic or deserializer updates.  
         like we have "NotificationForDC" and then we have "RepartitionedNotificationForDC", we need to update the transformer accordingly if we want to support all these topics.   
-        2. need to initial mapping entries as many as topics we want to support.   
+        - need to initial mapping entries as many as topics we want to support.   
 3. many-to-1 mapping: like "NotificationV2" and "NotificationForDC" are considered "Notification" service, therefore handled with "NotificationInstanceDeserializer".  
     - Pros:
         1. no need to maintain it when new topics created or topic name modified.  
