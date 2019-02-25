@@ -41,28 +41,28 @@ e.g. For Notification service, the topic name in kafka is "NotificationV2", and 
 2. Topic name -> Kafka record deserializer.  
 e.g. we have "NotificationInstanceDeserializer" for Notification. It's needed for API to decode record.  
 
-- Details  
+#### Details  
 For the second problem, we do have some trade-off:  
 *Topic name to Kafka record deserializer*
-1. no mapping: not doable
-2. 1-to-1 mapping: like "NotificationV2" -> "NotificationInstanceDeserializer" and "NotificationForDC" -> "NotificationInstanceDeserializer" are different entries in mapping.
-    - Pros: 
-        - easy to implement.  
-        - support Logic topic name to physical one. DIY  
-        - restrict user input.  
-    - Cons:
-        - need to maintain this mapping every time topic or deserializer updates.  
+- no mapping: not doable
+1. 1-to-1 mapping: like "NotificationV2" -> "NotificationInstanceDeserializer" and "NotificationForDC" -> "NotificationInstanceDeserializer" are different entries in mapping.
+    1. Pros: 
+        1. easy to implement.  
+        2. support Logic topic name to physical one. DIY  
+        3. restrict user input.  
+    2. Cons:
+        1. need to maintain this mapping every time topic or deserializer updates.  
         like we have "NotificationForDC" and then we have "RepartitionedNotificationForDC", we need to update the transformer accordingly if we want to support all these topics.   
-        - need to initial mapping entries as many as topics we want to support.   
-3. many-to-1 mapping: like "NotificationV2" and "NotificationForDC" are considered "Notification" service, therefore handled with "NotificationInstanceDeserializer".  
-    - Pros:
+        2. need to initial mapping entries as many as topics we want to support.   
+1. many-to-1 mapping: like "NotificationV2" and "NotificationForDC" are considered "Notification" service, therefore handled with "NotificationInstanceDeserializer".  
+    1. Pros:
         - no need to maintain it when new topics created or topic name modified.  
         - easy to understand.   
         - clean code.  
-    - Cons:
+    2. Cons:
         - cannot handle confusing topic names. Like "BussinessEventNotification".   
         - still support for some deprecated topics. Like "Notification".  
-4. service-to-deserializer mapping: i.e. Users need to specify which service their topic belongs to. In this way, users need to provide 4 parameters: service, topic, partition and offset.  
+- service-to-deserializer mapping: i.e. Users need to specify which service their topic belongs to. In this way, users need to provide 4 parameters: service, topic, partition and offset.  
     - Pros:  
         - Pros of "many-to-1" mapping  
         - can handle confused topic names.  
