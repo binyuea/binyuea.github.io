@@ -10,15 +10,15 @@ category:  projects
 These are team projects of my company, so I cannot provide too much detail data. But feel free to discuss the design and implementation.
 
 ## Tenant Filter
-1. The Tenant Filter is to filter out disabled tenants from source side -- tungsten(db replicator).  
+1. The Tenant Filter is to filter out disabled tenants from source side ---- tungsten(db replicator).  
 2. The result is great: with this feature, the latency has been decreased from several minutes to under 1s.
 3. The idea is from my manager, I just implement his idea.  
 ### Results
-I deployed this feature at 11:00 PM, Feb 22. You can see there is a huge drop down on `records-poll-rate`. (Hold the picture to zoom in) 
+I deployed this feature to production at 11:00 PM, Feb 22. You can see there is a huge drop down on `records-poll-rate`. (Hold the picture to zoom in) 
 <div style="text-align:center"><img src= "{{ "/img/projects/team_projects/tenant_filter1.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 <br> Because we filter out many disabled tenants events, there is no need to wait for the long call-back, the event handling latency has been decreased obviously. (Hold the picture to zoom in)
 <div style="text-align:center"><img src= "{{ "/img/projects/team_projects/tenant_filter2.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
-<br>
+<br> Now the avg lantency is under 1s.
 <div style="text-align:center"><img src= "{{ "/img/projects/team_projects/tenant_filter3.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 <br>
 
@@ -36,9 +36,9 @@ An API can GET/POST record from/to a specific position(topic, partition, offset)
 To implement this feature, we need to Serializer/Deserializer record to/from kafka. And different topic has different Serializer/Deserializer.  
 So there are several ways to handle this problem. Trade-off.
 - TOPIC Mapping:  
-1. Logic topic name (user input) to physical topic name(topic name in kafka).  
+1. Logic topic name (user input) -> physical topic name(topic name in kafka).  
 e.g. For Notification service, the topic name in kafka is "NotificationV2", and we also have related topic name like "NotificationForDC" in kafka.
-2. Topic name to Kafka record deserializer.  
+2. Topic name -> Kafka record deserializer.  
 e.g. we have "NotificationInstanceDeserializer" for Notification. It's needed for API to decode record.  
 
 - Details  
@@ -56,19 +56,19 @@ For the second problem, we do have some trade-off:
         - need to initial mapping entries as many as topics we want to support.   
 3. many-to-1 mapping: like "NotificationV2" and "NotificationForDC" are considered "Notification" service, therefore handled with "NotificationInstanceDeserializer".  
     - Pros:
-        1. no need to maintain it when new topics created or topic name modified.  
-        2. easy to understand.   
-        3. clean code.  
+        - no need to maintain it when new topics created or topic name modified.  
+        - easy to understand.   
+        - clean code.  
     - Cons:
-        1. cannot handle confusing topic names. Like "BussinessEventNotification".   
-        2. still support for some deprecated topics. Like "Notification".  
+        - cannot handle confusing topic names. Like "BussinessEventNotification".   
+        - still support for some deprecated topics. Like "Notification".  
 4. service-to-deserializer mapping: i.e. Users need to specify which service their topic belongs to. In this way, users need to provide 4 parameters: service, topic, partition and offset.  
     - Pros:  
-        1. Pros of "many-to-1" mapping  
-        2. can handle confused topic names.  
-        3. reasonable and safe: when POST, users should know which service they want to do POST, to change the record data.  
+        - Pros of "many-to-1" mapping  
+        - can handle confused topic names.  
+        - reasonable and safe: when POST, users should know which service they want to do POST, to change the record data.  
     - Cons:  
-        1. more parameter for users to input.  
+        - more parameters for users to input.  
 
  
 
