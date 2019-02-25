@@ -1,23 +1,36 @@
 ---
 layout:     post
-title:      team projects
+title:      Team Projects
 author:     Haibin
 tags:		kafka microservice tungsten
 subtitle:  	some team projects which I am the main code contributor
 category:  projects
 ---
 ## Start
-These are team projects of my company, so I cannot provide too much detail data. But feel free to talk about the design and implementation.
+These are team projects of my company, so I cannot provide too much detail data. But feel free to discuss the design and implementation.
 
 ### Tenant Filter
-The Tenant Filter is 
-The idea is from my manager, I just implement his idea.
-already deployed to production, with a great performance improvement. (latency from 10 min to 10s).
+1. The Tenant Filter is to filter out disabled tenants from source side -- tungsten(db replicator).  
+2. The result is great: with this feature, the latency has been decreased from several minutes to under 1s.
+3. The idea is from my manager, I just implement his idea.
+<br>
+I deployed this feature at 11:00 PM, Feb 22. You can see there is a huge drop down on `records-poll-rate`. Because we filter out many disabled tenants events, there is no need to wait for the long call-back, the event handling latency has been decreased obviously.
+<div style="text-align:center"><img src= "{{ "/img/projects/team-projects/tenant_filter1.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
+<br>
+<div style="text-align:center"><img src= "{{ "/img/projects/team-projects/tenant_filter2.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
+<br>
+<div style="text-align:center"><img src= "{{ "/img/projects/team-projects/tenant_filter3.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 
-key word:
-cache.refresh(non-blocking)
-cache size: only one key.
+##### key word:
+1. cache.refresh(non-blocking).
+<a href="https://github.com/google/guava/wiki/CachesExplained">guava cache</a> 
+2. cache size: only one key. That is a `final static String name`, which points to a `Set<String> activeTenants`.
+<a href="https://github.com/google/guava/issues/872">One key may be faster here.</a>
+
 ### TopicMessage API
 An API can GET/POST record from/to a specific position(topic, partition, offset) in Kafka.
+<div style="text-align:center"><img src= "{{ "/img/projects/team-projects/topic_message_api.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 
+- The challenge is
 Different topic has different Serializer/Deserializer.
+So there are several ways to handle this problem. Trade-off.
