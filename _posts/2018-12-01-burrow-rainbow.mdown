@@ -38,7 +38,7 @@ goRainbow github link <a href="https://github.com/HarbinZhang/goRainbow">More de
    1. It sends partition level metrics when lag exists(lag > 0), otherwise doesn't send. It saves a lot traffic.
    2. It guarantees every metric ends with 0, which behaves better in wavefront.
    3. It sends metrics per 30s when metrics change and per 60s for unchanged metrics.  
-3. Traffic saving calculation: (saves at least 85% data traffic)
+3. Traffic saving calculation: (saves at least 85% data traffic)  
 Until March 2019, we have:
    1. 25 consumer groups are using our Kafka service.   
    2. 64 partitions for each topic.   
