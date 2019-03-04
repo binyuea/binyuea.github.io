@@ -7,7 +7,12 @@ subtitle:  	Burrow service provides partition level lag for Apache Kafka
 category:  projects
 ---
 ## Burrow Rainbow
-#### What is Burrow
+- The original Burrow is a Lag monitoring service for Apache Kafka. 
+- In Zuora, Burrow Rainbow provides more visibility for other teams who are using our Kafka service. 
+    - Producer status: for each producer, how many records produced to each partition.
+    - Consumer status: for each consumer, which partition(s) are hosted and how many records consumed per minute.
+    - Lag: total lag in the whole consumer group and partition level lag.
+#### What is Burrow from Linkedin
 Burrow is a monitoring companion for Apache Kafka that provides consumer lag checking as a service without the need for specifying thresholds. It monitors committed offsets for all consumers and calculates the status of those consumers on demand. An HTTP endpoint is provided to request status on demand, as well as provide other Kafka cluster information. There are also configurable notifiers that can send status out via email or HTTP calls to another service.  
  
 Here is my inspection of Burrow source code <a href="https://github.com/HarbinZhang/goRainbow/tree/master/burrow">Burrow Inspection</a>
@@ -18,11 +23,6 @@ The main work is about Rainbow, which pulls information from Burrow, translates 
 
 I implemented push-model rainbow(waiting for Burrow message) at first, but got some problem. The Burrow notifier is not stable all the time. After discussed with teammates, I implemented pull-model rainbow(activly pull information from Burrow) and now it works much better.  
 
-#### Features worthy mention
-1. Heath-check: It provides health-check HTTP service so that AWS can auto restart Burrow-goRainbow when the service is unavailable.
-2. Dynamic metric sending:
-   1. It sends partition level metrics when lag exists. Also it guarantees every metric starts from 0 and ends with 0, which shows better in wavefront.
-   2. It sends metrics per 30s when metrics change and per 60s for unchanged metrics.  
 
 ### Link
 goRainbow github link <a href="https://github.com/HarbinZhang/goRainbow">More details</a>
@@ -31,6 +31,24 @@ goRainbow github link <a href="https://github.com/HarbinZhang/goRainbow">More de
 2. `alive consumers maintainer` checks Burrow periodically to see whether there is a new consumer or not. If so, it would raise a new `consumer handler` for the new consumer.
 3. `consumer handler` would deregister itself in `alive consumers maintainer` when its consumer is not valid any longer.  
 
+#### Features worthy mention
+1. Heath-check: It provides health-check HTTP service so that AWS can auto restart Burrow-goRainbow when the service is unavailable.
+2. Dynamic metrics sending:
+   1. It sends partition level metrics when lag exists(lag > 0), otherwise doesn't send. It saves a lot traffic.
+   2. It guarantees every metric ends with 0, which behaves better in wavefront.
+   3. It sends metrics per 30s when metrics change and per 60s for unchanged metrics.  
+3. Traffic saving calculation.  
+Until March 2019, 
+   1. 25 consumer groups are using our Kafka service.   
+   2. 64 partitions for each topic.   
+   3. Basically, 3 metrics for each partition level lag. (offset, startOffset, endOffset).  
+- without dynamic metrics sending, we should have sent 4950 metrics each time.
+(totalLagMetrics(1) + maxLagPartitionMetrics(5) + allPartitionsMetrics(64*3)) * consumers(25) = 4950 metrics each time. 
+- With dynamic metrics sending, we should have sent 726 metrics each time.
+(totalLagMetrics(1) + maxLagPartitionMetrics(5) + allPartitionsMetrics(64*3)) * consumersWithLag(3) +  
+  (totalLagMetrics(1) + maxLagPartitionMetrics(5)) * consumersWithoutLag(22) = 726
+- In conclusion, we can save 85% data traffic for consumer lag part.
+<div style="text-align:center"><img src= "{{ "/img/projects/burrow/dynamicTraffic.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 ### Dashboard
 - Lag (Hold the picture to zoom in)
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/lag.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>

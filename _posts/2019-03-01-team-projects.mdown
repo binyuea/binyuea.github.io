@@ -18,7 +18,7 @@ I deployed this feature to production at 11:00 PM, Feb 22. You can see there is 
 <div style="text-align:center"><img src= "{{ "/img/projects/team_projects/tenant_filter1.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 <br> Because we filter out many disabled tenants events, there is no need to wait for the long call-back, the event handling latency has been decreased obviously. (Hold the picture to zoom in)
 <div style="text-align:center"><img src= "{{ "/img/projects/team_projects/tenant_filter2.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
-<br> Now the avg lantency is under 1s.
+<br> Now the avg lantency is under 1 second, so the performance has been improved by 10x. Even my manager was impressed by it.
 <div style="text-align:center"><img src= "{{ "/img/projects/team_projects/tenant_filter3.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 <br>
 
