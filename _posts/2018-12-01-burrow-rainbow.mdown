@@ -44,12 +44,12 @@ Until March 2019, we have:
    2. 64 partitions for each topic.   
    3. Basically, 3 metrics for each partition level lag. (offset, startOffset, endOffset).  
 
-- without dynamic metrics sending, we should have sent 4950 metrics each time.  
+- Without dynamic metrics sending, we should have sent 4950 metrics each time.  
 (totalLagMetrics(1) + maxLagPartitionMetrics(5) + allPartitionsMetrics(64*3)) * consumers(25) = 4950 metrics each time. 
 - With dynamic metrics sending, we should have sent 726 metrics each time.  
 (totalLagMetrics(1) + maxLagPartitionMetrics(5) + allPartitionsMetrics(64*3)) * consumersWithLag(3) +  
   (totalLagMetrics(1) + maxLagPartitionMetrics(5)) * consumersWithoutLag(22) = 726
-- In conclusion, we can save 85% data traffic for consumer lag part.
+- In conclusion, we can save at least 85% data traffic for consumer lag part, because consumers are not having lag all the time.
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/dynamicTraffic.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 ### Dashboard
 - Lag (Hold the picture to zoom in)
