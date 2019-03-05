@@ -25,7 +25,7 @@ Raised an idea from "time billing" of Alexander Alexandrovich Lyubishchev.
 
 The key is to record the time cost of each activity after the things done or at a certain moment. In this way, the time tracking is easier and more precise.
 
-## What is it look like?  
+## What does it look like?  
 - The adding fragment screen is like:  
 
 <div style="text-align:center"><img src= "{{ "/img/projects/timego/add.png " | prepend: site.baseurl }}" style="width: 40%; margin-left: 20%; margin-right: 20%;"></div>
