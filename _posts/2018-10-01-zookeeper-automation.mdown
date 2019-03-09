@@ -20,4 +20,4 @@ In my implementaion, I choose their IP as the common key, and their ID can be de
 
 ### Link
 You may check logic charts and more details via this link.
-<a href="https://github.com/HarbinZhang/zookeeper_automation">More details</a>
+<a href="https://github.com/HarbinZhang/zookeeper_automation" style="color: rgb(0,102,204)">More details</a>

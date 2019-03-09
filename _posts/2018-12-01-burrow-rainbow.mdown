@@ -16,7 +16,7 @@ category:  projects
 ### What is Burrow from Linkedin
 Burrow is a monitoring companion for Apache Kafka that provides consumer lag checking as a service without the need for specifying thresholds. It monitors committed offsets for all consumers and calculates the status of those consumers on demand. An HTTP endpoint is provided to request status on demand, as well as provide other Kafka cluster information. There are also configurable notifiers that can send status out via email or HTTP calls to another service.  
  
-Here is my inspection of Burrow source code <a href="https://github.com/HarbinZhang/goRainbow/tree/master/burrow">Burrow Inspection</a>  
+Here is my inspection of Burrow source code <a href="https://github.com/HarbinZhang/goRainbow/tree/master/burrow" style="color: rgb(0,102,204)">Burrow Inspection</a>  
 
 ### What is my work
 In Zuora, I own Burrow service, including Dockerfile, ansible-quasar, Jenkinsfile for CICD, goRainbow and wavefront dashboard.  
@@ -26,7 +26,7 @@ The main work is about Rainbow, which pulls information from Burrow, translates 
 I implemented push-model rainbow(waiting for Burrow message) at first, but got some problem. The Burrow notifier is not stable all the time. After discussed with teammates, I implemented pull-model rainbow(activly pull information from Burrow) and now it works much better.  
 
 ### Link
-goRainbow github link <a href="https://github.com/HarbinZhang/goRainbow">More details</a>
+goRainbow github link <a href="https://github.com/HarbinZhang/goRainbow" style="color: rgb(0,102,204)">More details</a>
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/rainbow_structure.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 1. Each `consumer handler` is responsible for one consumer and has one specific url(`burrow/{cluster}/{consumer}`) to pull the consumer info from Burrow.
 2. `alive consumers maintainer` checks Burrow periodically to see whether there is a new consumer or not. If so, it would raise a new `consumer handler` for the new consumer.
@@ -65,4 +65,4 @@ Until March 2019, we have:
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/eachTraffic.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 <br>
 ### Link
-<a href="https://github.com/HarbinZhang/goRainbow">More details</a>
+<a href="https://github.com/HarbinZhang/goRainbow" style="color: rgb(0,102,204)">More details</a>

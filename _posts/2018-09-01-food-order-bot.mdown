@@ -17,4 +17,4 @@ Besides, the bot would send a food review after lunch to gather reviews from eng
 
 ### Link
 You may check pictures and more details via this link.
-<a href="https://github.com/HarbinZhang/food-order-bot">More details</a>
+<a href="https://github.com/HarbinZhang/food-order-bot" style="color: rgb(0,102,204)">More details</a>
