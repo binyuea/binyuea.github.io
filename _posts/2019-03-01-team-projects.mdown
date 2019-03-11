@@ -13,7 +13,8 @@ These are team projects of my company, so I cannot provide too much detail data.
 1. The Tenant Filter is to filter out disabled tenants from source side ---- tungsten(db replicator).  
 2. The result is great: with this feature and some other filters, the following pipeline latency has been decreased from several minutes to under 1s.
 3. The idea is from my manager, I just implement his idea.  
-### key word:
+<br>
+### key words:
 1. cache.refresh(non-blocking).  
 <a href="https://github.com/google/guava/wiki/CachesExplained" style="color: rgb(0,102,204)">Guava cache</a> 
 2. cache size: only one key. That is a `final static String name`, which points to a `Set<String> activeTenants`.  
