@@ -11,7 +11,7 @@ These are team projects of my company, so I cannot provide too much detail data.
 
 ## Tenant Filter
 1. The Tenant Filter is to filter out disabled tenants from source side ---- tungsten(db replicator).  
-2. The result is great: with this feature and some other filters, the following pipeline latency has been decreased from several minutes to under 1s.
+2. The result is great: with this feature and other newly added filters, the following pipeline latency has been decreased from several minutes to under 1s.
 3. The idea is from my manager, I just implement his idea.  
 <br>
 ### key words:
