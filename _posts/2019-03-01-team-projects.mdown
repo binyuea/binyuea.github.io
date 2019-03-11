@@ -17,7 +17,7 @@ These are team projects of my company, so I cannot provide too much detail data.
 ### key words:
 1. cache.refresh(non-blocking).  
 <a href="https://github.com/google/guava/wiki/CachesExplained" style="color: rgb(0,102,204)">Guava cache</a> 
-2. cache size: only one key. That is a `final static String name`, which points to a `Set<String> activeTenants`.  
+2. cache size: only one key. The key is a `final static String name`, while the value is a `Set<String> activeTenants`.  
 <a href="https://github.com/google/guava/issues/872" style="color: rgb(0,102,204)">Only one key in the cache may be faster here.</a>
 ### Results
 I deployed this feature to production at 11:00 PM, Feb 22. There are multiple patches in this deployment, so tenant filtering would be one of the reasons.  
