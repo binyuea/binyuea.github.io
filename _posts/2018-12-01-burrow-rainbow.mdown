@@ -23,7 +23,7 @@ In Zuora, I own Burrow service, including Dockerfile, ansible-quasar, Jenkinsfil
 
 The main work is about Rainbow, which pulls information from Burrow, translates it into metrics, and sends it to the wavefront.  
 
-I implemented push-model rainbow(waiting for Burrow message) at first, but got some problem. The Burrow notifier is not stable all the time. After discussed with teammates, I implemented pull-model rainbow(activly pull information from Burrow) and now it works much better.  
+I implemented push-model rainbow(waiting for Burrow message) at first, but got some problem, the Burrow notifier is not stable all the time. After discussed with teammates, I implemented pull-model rainbow(activly pull information from Burrow) and now it works much better.  
 
 ### Link
 goRainbow github link <a href="https://github.com/HarbinZhang/goRainbow" style="color: rgb(0,102,204)">More details</a>
