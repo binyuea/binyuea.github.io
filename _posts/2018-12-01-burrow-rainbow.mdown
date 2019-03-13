@@ -3,11 +3,11 @@ layout:     post
 title:      Burrow Rainbow
 author:     Haibin
 tags:		github kafka go
-subtitle:  	Burrow service provides partition level lag for Apache Kafka
+subtitle:  	Burrow service provides visibility for Apache Kafka users
 category:  projects
 ---
 ## Burrow Rainbow
-- The original Burrow is a Lag monitoring service for Apache Kafka. 
+- The original [Burrow](https://github.com/linkedin/Burrow) is a Lag monitoring service for Apache Kafka. 
 - In Zuora, Burrow Rainbow provides more visibility for other teams who are using our Kafka service. 
     - Producer status: for each producer, how many records produced to each partition.
     - Consumer status: for each consumer, which partition(s) are hosted and how many records consumed per minute.
