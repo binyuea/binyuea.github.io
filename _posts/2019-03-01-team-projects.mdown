@@ -7,7 +7,7 @@ subtitle:  	summaries of some team projects
 category:  projects
 ---
 ## Start
-These are team projects of my company, so I cannot provide detailed data, but some experience and suggestion. And our company encourages us to share technical problems we met and how we solved them.
+These are team projects of my company, so I cannot provide detailed data, but some experience and suggestion. And our company encourages us to write blogs to share technical problems we met and how we solved them.
 
 ## Tenant Filter
 1. The Tenant Filter is to filter out disabled tenants from source side ---- tungsten(db replicator).  
