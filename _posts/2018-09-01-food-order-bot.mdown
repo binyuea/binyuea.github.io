@@ -17,6 +17,7 @@ Besides, the bot would send a food review after lunch to gather reviews from eng
 
 ### Link
 You may check pictures and more details via this link.
-<a href="https://github.com/HarbinZhang/food-order-bot" style="color: rgb(0,102,204)">More details</a>
+<a href="https://github.com/HarbinZhang/food-order-bot" style="color: rgb(0,102,204)">More details</a>  
+
 <br>
 The food order bot code structure is bad, I put all functions into one file. I didn't have a good feeling of how to keep a good project structure at that time. But my newer projects structure are much better, like [goRainbow](https://github.com/HarbinZhang/goRainbow), it has pipeline, modules, utils and protocol packages.
