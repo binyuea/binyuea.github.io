@@ -21,11 +21,13 @@ Here is my inspection of Burrow source code <a href="https://github.com/HarbinZh
 ### What is my work
 In Zuora, I am responsible for Burrow service, including Dockerfile, ansible-quasar, Jenkinsfile for CICD, goRainbow and wavefront dashboard.  
 
-The main work is about goRainbow, which pulls information from Burrow, translates it into metrics, and sends it to the wavefront. goRainbow is an open source project, I am still working on enhancing it.  
+The main work is about goRainbow, which pulls information from Burrow, translates it into metrics, and sends it to the wavefront. 
 
 I implemented push-model rainbow(waiting for Burrow message) at first, but got some problem, the Burrow notifier is not stable all the time. After discussed with teammates, I implemented pull-model rainbow(activly pull information from Burrow) and now it works much better.  
 
 ### Link
+goRainbow is an open source project, I am still working on enhancing it.  
+
 goRainbow github link <a href="https://github.com/HarbinZhang/goRainbow" style="color: rgb(0,102,204)">More details</a>
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/rainbow_structure.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 1. Each `consumer handler` is responsible for one consumer and has one specific url(`burrow/{cluster}/{consumer}`) to pull the consumer info from Burrow.
