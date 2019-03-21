@@ -51,18 +51,6 @@ Until March 2019, we have:
   (totalLagMetrics(1) + maxLagPartitionMetrics(5)) * consumersWithoutLag(22) = 726
 - In conclusion, we can save at least 85% data traffic for consumer lag part, because consumers are not having lag all the time and only partitions with lag would send metrics.
 <div style="text-align:center"><img src= "{{ "/img/projects/burrow/dynamicTraffic.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
-### Dashboard
-- Lag (Hold the picture to zoom in)
-<div style="text-align:center"><img src= "{{ "/img/projects/burrow/lag.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
-<br>
-- Lag details (Hold the picture to zoom in)
-<div style="text-align:center"><img src= "{{ "/img/projects/burrow/thl_raw.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
-<br>
-- Total traffic (Hold the picture to zoom in)
-<div style="text-align:center"><img src= "{{ "/img/projects/burrow/totalTraffic.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
-<br>
-- Each env traffic (Hold the picture to zoom in)
-<div style="text-align:center"><img src= "{{ "/img/projects/burrow/eachTraffic.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
-<br>
+
 ### Link
 <a href="https://github.com/HarbinZhang/goRainbow" style="color: rgb(0,102,204)">More details</a>
