@@ -3,11 +3,11 @@ layout:     post
 title:      Team Projects
 author:     Haibin
 tags:		kafka microservice tungsten
-subtitle:  	some team projects which I am the main code contributor
+subtitle:  	summaries of some team projects
 category:  projects
 ---
 ## Start
-These are team projects of my company, so I cannot provide too much detail data. But feel free to discuss the design and implementation.
+These are team projects of my company, so I cannot provide detailed data, but some experience and suggestion. And our company encourages us to share technical problems we met and how we solved them.
 
 ## Tenant Filter
 1. The Tenant Filter is to filter out disabled tenants from source side ---- tungsten(db replicator).  
@@ -19,19 +19,11 @@ These are team projects of my company, so I cannot provide too much detail data.
 <a href="https://github.com/google/guava/wiki/CachesExplained" style="color: rgb(0,102,204)">Guava cache</a> 
 2. cache size: only one key. The key is a `final static String name`, while the value is a `Set<String> activeTenants`.  
 <a href="https://github.com/google/guava/issues/872" style="color: rgb(0,102,204)">Only one key in the cache may be faster here.</a>
-### Results
-I deployed this feature to production at 11:00 PM, Feb 22. There are multiple patches in this deployment, so tenant filtering would be one of the reasons.  
-<br> Because we filter out many disabled tenants events, there is no need to wait for the long call-back, the event handling latency has been decreased obviously. (Hold the picture to zoom in)
-<div style="text-align:center"><img src= "{{ "/img/projects/team_projects/tenant_filter2.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
-<br> Now the avg lantency is under 1 second, so the performance has been improved by 10x. Even my manager was impressed by it.
-<div style="text-align:center"><img src= "{{ "/img/projects/team_projects/tenant_filter3.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
 <br>
-
-
 
 ## TopicMessage API
 An API can GET/POST record from/to a specific position(topic, partition, offset) in Kafka.
-<div style="text-align:center"><img src= "{{ "/img/projects/team_projects/topic_message_api.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;"></div>
+<div style="text-align:center"><img src= "{{ "/img/projects/team_projects/topic_message_api.png" | prepend: site.baseurl }}" style="width: 100%; margin-left: 0%; margin-right: 0%;">The basic idea</div>
 
 ### Some trade-off
 To implement this feature, we need to Serializer/Deserializer record to/from kafka. And different topic has different Serializer/Deserializer.  
