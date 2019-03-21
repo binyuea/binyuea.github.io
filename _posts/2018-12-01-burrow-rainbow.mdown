@@ -21,7 +21,7 @@ Here is my inspection of Burrow source code <a href="https://github.com/HarbinZh
 ### What is my work
 In Zuora, I am responsible for Burrow service, including Dockerfile, ansible-quasar, Jenkinsfile for CICD, goRainbow and wavefront dashboard.  
 
-The main work is about goRainbow, which pulls information from Burrow, translates it into metrics, and sends it to the wavefront.(still working on enhancing it)  
+The main work is about goRainbow, which pulls information from Burrow, translates it into metrics, and sends it to the wavefront. goRainbow is an open source project, I am still working on enhancing it.  
 
 I implemented push-model rainbow(waiting for Burrow message) at first, but got some problem, the Burrow notifier is not stable all the time. After discussed with teammates, I implemented pull-model rainbow(activly pull information from Burrow) and now it works much better.  
 
