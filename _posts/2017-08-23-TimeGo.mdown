@@ -12,7 +12,7 @@ You can search for it by the keyword "TimeGo".
 
 <a href="https://play.google.com/store/apps/details?id=com.timego.harbin.timego&hl=en" style="color: rgb(0,102,204)">Or you can click here : )</a>  
 <br>
-Update(4/9): The App has been blocked because of *Violation of Usage of Android Advertising ID policy*. I'm busy working with some stuff currently, I will update a new App with qualified policy later.
+Update(4/9): The App has been blocked because of *Violation of Usage of Android Advertising ID policy*. I'm busy working with other stuff currently, I will update a new App with qualified policy later.
 
 ## I built this APP is because there isn't a right APP to solve my problem.
 #### Why is this a bad design?
